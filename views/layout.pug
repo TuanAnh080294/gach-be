@@ -1,0 +1,124 @@
+html
+  head
+    link(rel='shortcut icon', href='../public/images/theme-default/favicon.png?v=90', type='image/png')
+    meta(charset='utf-8')
+    title OxyWatch 
+    link(rel='canonical', href='http://happylive.vn/')
+    meta(name='robots', content='index,follow')
+    meta(name='revisit-after', content='1 day')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    meta(name='HandheldFriendly', content='true')
+    meta(content='width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=0', name='viewport')
+    script.
+      //<![CDATA[
+      (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', './www.google-analytics.com/analytics.js', 'ga');
+      ga('create', 'UA-97086989-1', 'auto');
+      try {
+      } catch (e) { };
+      ga('send', 'pageview');
+      //]]>
+    script.
+      //<![CDATA[
+      !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+      n.callMethod ?
+      n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      }; if (!f._fbq) f._fbq = n;
+      n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+      } (window,
+      document, 'script', './connect.facebook.net/en_US/fbevents.js');
+      // Insert Your Facebook Pixel ID below.
+      fbq('init', '905600829489553');
+      fbq('track', 'PageView');
+      //]]>
+    noscript
+      img(height='1', width='1', style='display: none', src='https://www.facebook.com/tr?id=905600829489553&ev=PageView&noscript=1')
+    //
+      <script type='text/javascript'>
+      //<![CDATA[
+      if ((typeof Haravan) === 'undefined') {
+      Haravan = {};
+      }
+      Haravan.culture = 'vi-VN';
+      Haravan.shop = 'happylive.myharavan.com';
+      Haravan.theme = { "name": "Theme mặc định", "id": 1000229231, "role": "main" };
+      Haravan.domain = 'happylive.vn';
+      //]]>
+      </script>
+    script.
+      //<![CDATA[
+      (function () { function asyncLoad() { var urls = ["../public/javascripts/noname.js"]; for (var i = 0; i < urls.length; i++) { var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = urls[i]; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); } } window.attachEvent ? window.attachEvent('onload', asyncLoad) : window.addEventListener('load', asyncLoad, false); })();
+      //]]>
+    script(src='../public/javascripts/jquery/jquery.min.1.11.0.js')
+    script(src='../public/javascripts/bootstrap.min.js')
+    script(src='../public/javascripts/option_selection.js', type='text/javascript')
+    script(src='../public/javascripts/api.jquery.js', type='text/javascript')
+    script.
+      var formatMoney = '{{amount}}₫';
+    script(src='../public/javascripts/default_script.min.js?v=90', type='text/javascript')
+    link(href='../public/stylesheets/default_style.min.css?v=90', rel='stylesheet', type='text/css', media='all')
+    //if lt IE 9
+      script(src='./hstatic.net/0/0/global/design/theme-default/html5shiv.js')
+    script(src='../public/javascripts/jquery/jquery-migrate-1.2.0.min.js')
+    script(src='../public/javascripts/jquery/jquery.touchSwipe.min.js', type='text/javascript')
+    script(data-target='.product-resize', data-parent='.products-resize', data-img-box='.image-resize', src='../public/javascripts/fixheightproductv2.js')
+    script(src='../public/javascripts/haravan.plugin.1.0.js')
+    script(src='../public/javascripts/jquery/jquery.flexslider.js', type='text/javascript')
+    link(href='../public/stylesheets/flexslider.css', rel='stylesheet', type='text/css', media='all')
+    script(src='../public/javascripts/scripts.js?v=90', type='text/javascript')
+    link(rel='stylesheet', type='text/css', href='./css/roboto.css')
+    meta(property='og:type', content='website')
+    meta(property='og:title', content='Nippon')
+    meta(property='og:image', content='http://theme.hstatic.net/1000177652/1000229231/14/share_fb_home.png?v=90')
+    meta(property='og:image', content='https://theme.hstatic.net/1000177652/1000229231/14/share_fb_home.png?v=90')
+    meta(property='og:url', content='http://happylive.vn/')
+    meta(property='og:site_name', content='Nippon')
+    // Latest compiled and minified CSS
+    link(rel='stylesheet', href='../public/stylesheets/bootstrap.3.3.1.css')
+    // Latest compiled and minified JavaScript
+    link(href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css', rel='stylesheet', type='text/css', media='all')
+    link(href='../public/stylesheets/style.css', rel='stylesheet', type='text/css', media='all')
+  //menu
+  nav#menu-mobile.hidden
+    ul
+      li
+        a(href='/') Trang ch&#x1EE7;
+      li.has-children
+        a(href='/collections/dong-ho-nam') G&#x1EA1;ch Trang Tr&iacute; N&#x1ED9;i Th&#x1EA5;t
+        ul.child.count-nav-6
+          li
+            a(href='/collections/dong-ho-nam-tevise') G&#x1EA1;ch Trang Tr&iacute; Ngo&#x1EA1;i Th&#x1EA5;t
+          li
+            a(href='/collections/dong-ho-nam-skmei') &Dstrok;&#x1ED3;ng h&#x1ED3; Skmei
+          li
+            a(href='/collections/dong-ho-nam-halei') &Dstrok;&#x1ED3;ng h&#x1ED3; Halei
+          li
+            a(href='/collections/dong-ho-nam-longbo') &Dstrok;&#x1ED3;ng h&#x1ED3; Longbo
+          li
+            a(href='/collections/dong-ho-nam-curren') &Dstrok;&#x1ED3;ng h&#x1ED3; nam Curren
+          li
+            a(href='/collections/dong-ho-nam-baishuns') &Dstrok;&#x1ED3;ng h&#x1ED3; nam Baishuns
+      li.has-children
+        a(href='/collections/dong-ho-nu') G&#x1EA1;ch Trang Tr&iacute; Ngo&#x1EA1;i Th&#x1EA5;t
+        ul.child.count-nav-3
+          li
+            a(href='/collections/dong-ho-nu-beesister') &Dstrok;&#x1ED3;ng h&#x1ED3; Beesister
+          li
+            a(href='/collections/dong-ho-nu-skmei') &Dstrok;&#x1ED3;ng h&#x1ED3; Skmei
+          li
+            a(href='/collections/dong-ho-nu-halei') &Dstrok;&#x1ED3;ng h&#x1ED3; Halei
+      li
+        a(href='/pages/dich-vu') D&#x1ECB;ch v&#x1EE5;
+      li
+        a(href='/pages/gioi-thieu') Gi&#x1EDB;i thi&#x1EC7;u
+      li
+        a(href='/blogs/news') Blog
+    block content
+
