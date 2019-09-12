@@ -10,58 +10,12 @@ html
     meta(http-equiv='x-ua-compatible', content='ie=edge')
     meta(name='HandheldFriendly', content='true')
     meta(content='width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=0', name='viewport')
-    script.
-      //<![CDATA[
-      (function (i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-      (i[r].q = i[r].q || []).push(arguments)
-      }, i[r].l = 1 * new Date(); a = s.createElement(o),
-      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-      })(window, document, 'script', './www.google-analytics.com/analytics.js', 'ga');
-      ga('create', 'UA-97086989-1', 'auto');
-      try {
-      } catch (e) { };
-      ga('send', 'pageview');
-      //]]>
-    script.
-      //<![CDATA[
-      !function (f, b, e, v, n, t, s) {
-      if (f.fbq) return; n = f.fbq = function () {
-      n.callMethod ?
-      n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-      }; if (!f._fbq) f._fbq = n;
-      n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
-      t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
-      } (window,
-      document, 'script', './connect.facebook.net/en_US/fbevents.js');
-      // Insert Your Facebook Pixel ID below.
-      fbq('init', '905600829489553');
-      fbq('track', 'PageView');
-      //]]>
-    noscript
-      img(height='1', width='1', style='display: none', src='https://www.facebook.com/tr?id=905600829489553&ev=PageView&noscript=1')
-    //
-      <script type='text/javascript'>
-      //<![CDATA[
-      if ((typeof Haravan) === 'undefined') {
-      Haravan = {};
-      }
-      Haravan.culture = 'vi-VN';
-      Haravan.shop = 'happylive.myharavan.com';
-      Haravan.theme = { "name": "Theme mặc định", "id": 1000229231, "role": "main" };
-      Haravan.domain = 'happylive.vn';
-      //]]>
-      </script>
-    script.
-      //<![CDATA[
-      (function () { function asyncLoad() { var urls = ["/javascripts/noname.js"]; for (var i = 0; i < urls.length; i++) { var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = urls[i]; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); } } window.attachEvent ? window.attachEvent('onload', asyncLoad) : window.addEventListener('load', asyncLoad, false); })();
-      //]]>
     script(src='/javascripts/jquery/jquery.min.1.11.0.js')
     script(src='/javascripts/bootstrap.min.js')
     script(src='/javascripts/option_selection.js', type='text/javascript')
     script(src='/javascripts/api.jquery.js', type='text/javascript')
-    script.
-      var formatMoney = '{{amount}}₫';
+    
+    
     script(src='/javascripts/default_script.min.js?v=90', type='text/javascript')
     link(href='/stylesheets/default_style.min.css?v=90', rel='stylesheet', type='text/css', media='all')
     //if lt IE 9
@@ -73,7 +27,7 @@ html
     script(src='/javascripts/jquery/jquery.flexslider.js', type='text/javascript')
     link(href='/stylesheets/flexslider.css', rel='stylesheet', type='text/css', media='all')
     script(src='/javascripts/scripts.js?v=90', type='text/javascript')
-    link(rel='stylesheet', type='text/css', href='./css/roboto.css')
+    link(rel='stylesheet', type='text/css', href='./stylesheets/roboto.css')
     meta(property='og:type', content='website')
     meta(property='og:title', content='Nippon')
     meta(property='og:image', content='http://theme.hstatic.net/1000177652/1000229231/14/share_fb_home.png?v=90')
@@ -183,155 +137,423 @@ html
               .qv-readmore
                 span ho&#x1EB7;c 
                 a.read-more.p-url(href='', role='button') Xem chi ti&#x1EBF;t
-    script.
-  //- //- QUICK VIEW JS 
-  //- jQuery(document).ready(function () {
-  //- var callBack = function (variant, selector) {
-  //- if (variant) {
-  //- item = $('.wrapper-quickview');
-  //- if (variant != null && variant.featured_image != null) {
-  //- item.find(".product-thumb a[data-image='" + Haravan.resizeImage(variant.featured_image.src, 'large') + "']").click();
-  //- }
-  //- item.find('.quickview-price').find('span').html(Haravan.formatMoney(variant.price, "{{amount}}₫"));
-  //- if (variant.compare_at_price > variant.price)
-  //- item.find('.quickview-price').find('del').html(Haravan.formatMoney(variant.compare_at_price, "{{amount}}₫"));
-  //- else
-  //- item.find('.quickview-price').find('del').html('');
-  //- if (variant.available) {
-  //- item.find('.btn-addcart').css('display', 'block');
-  //- item.find('.btn-soldout').css('display', 'none');
-  //- }
-  //- else {
-  //- item.find('.btn-addcart').css('display', 'none');
-  //- item.find('.btn-soldout').css('display', 'block');
-  //- }
-  //- }
-  //- else {
-  //- item.find('.btn-addcart').css('display', 'none');
-  //- item.find('.btn-soldout').css('display', 'block');
-  //- }
-  //- }
-  //- var quickview_html_variants = $('.quickview-variants').html();
-  //- var quickview_image_zoom = $('.quickview-image').html();
-  //- var quickViewProduct = function (purl) {
-  //- if ($(window).width() < 680) {
-  //- window.location = purl;
-  //- return false;
-  //- }
-  //- item = $('.wrapper-quickview');
-  //- $.ajax({
-  //- url: purl + '.js',
-  //- async: false,
-  //- success: function (product) {
-  //- $.each(product.options, function (i, v) {
-  //- product.options[i] = v.name;
-  //- })
-  //- item.find('.quickview-title').attr('title', product.title).attr('href', product.url).find('h4').html(product.title);
-  //- item.find('.quickview-variants').html(quickview_html_variants);
-  //- $('.quickview-image').html(quickview_image_zoom);
-  //- $.each(product.variants, function (i, v) {
-  //- item.find('#quickview-select').append("<option value='" + v.id + "'>" + v.title + ' - ' + v.price + "</option>");
-  //- })
-  //- if (product.variants.length == 1 && product.variants[0].title.indexOf('Default') != -1)
-  //- $('#quickview-select').hide();
-  //- else
-  //- $('#quickview-select').show();
-  //- if (product.variants.length == 1 && product.variants[0].title.indexOf('Default') != -1) {
-  //- callBack(product.variants[0], null);
-  //- }
-  //- else {
-  //- new Haravan.OptionSelectors("quickview-select", { product: product, onVariantSelected: callBack });
-  //- if (product.options.length == 1 && product.options[0].indexOf('Tiêu đề') == -1)
-  //- item.find('.selector-wrapper:eq(0)').prepend('<label>' + product.options[0] + '</label>');
-  //- $('.p-option-wrapper select:not(#p-select)').each(function () {
-  //- $(this).wrap('<span class="custom-dropdown custom-dropdown--white"></span>');
-  //- $(this).addClass("custom-dropdown__select custom-dropdown__select--white");
-  //- });
-  //- callBack(product.variants[0], null);
-  //- }
-  //- if (product.images.length == 0) {
-  //- item.find('.quickview-image').find('img').attr('alt', product.title).attr('src', '/images/theme-default/no-image.png');
-  //- }
-  //- else {
-  //- $('.quickview-slider').remove();
-  //- $('#quickview-sliderproduct').append("<div class='quickview-slider' class='flexslider'>");
-  //- $('.quickview-slider').append("<ul class='owl-carousel'>");
-  //- $.each(product.images, function (i, v) {
-  //- elem = $('<li class="product-thumb">').append('<a href="javascript:void(0);" data-image=""><img /></a>');
-  //- elem.find('a').attr('data-image', Haravan.resizeImage(v, 'large'));
-  //- elem.find('img').attr('src', Haravan.resizeImage(v, 'small'));
-  //- item.find('.owl-carousel').append(elem);
-  //- });
-  //- item.find('.quickview-image img').attr('alt', product.title).attr('src', Haravan.resizeImage(product.featured_image, 'large'));
-  //- $('.quickview-slider img').imagesLoaded(function () {
-  //- var owl = $('.owl-carousel');
-  //- owl.owlCarousel({
-  //- items: 3,
-  //- navigation: true,
-  //- navigationText: ['owl-prev', 'owl-next']
-  //- });
-  //- $('.quickview-slider .owl-carousel .owl-item').first().children('.product-thumb').addClass('active');
-  //- });
-  //- }
-  //- }
-  //- });
-  //- return false;
-  //- }
-  //- //final width --> this is the quick view image slider width
-  //- //maxQuickWidth --> this is the max-width of the quick-view panel
-  //- var sliderFinalWidth = 500,
-  //- maxQuickWidth = 900;
-  //- //open the quick view panel
-  //- jQuery(document).on("click", ".quickview", function (event) {
-  //- var selectedImage = $(this).parents('.product-block').find('.product-img img'),
-  //- slectedImageUrl = selectedImage.attr('src');
-  //- quickViewProduct($(this).attr('data-handle'));
-  //- animateQuickView(selectedImage, sliderFinalWidth, maxQuickWidth, 'open');
-  //- //update the visible slider image in the quick view panel
-  //- //you don't need to implement/use the updateQuickView if retrieving the quick view data with ajax
-  //- });
-  //- $('.wrapper-quickview').on('click', '.product-thumb a', function () {
-  //- item = $('.wrapper-quickview');
-  //- item.find('.quickview-image img').attr('src', $(this).attr('data-image'));
-  //- item.find('.product-thumb').removeClass('active');
-  //- $(this).parents('li').addClass('active');
-  //- return false;
-  //- });
-  //- //close the quick view panel
-  //- $(document).on('click', '.quickview-close, .quickviewOverlay', function (e) {
-  //- $(".wrapper-quickview").fadeOut(500);
-  //- $('.jsQuickview').fadeOut(500);
-  //- });
-  //- //center quick-view on window resize
-  //- $(window).on('resize', function () {
-  //- if ($('.wrapper-quickview').hasClass('is-visible')) {
-  //- window.requestAnimationFrame(resizeQuickView);
-  //- }
-  //- });
-  //- function animateQuickView(image, finalWidth, maxQuickWidth, animationType) {
-  //- $('.wrapper-quickview').fadeIn(500);
-  //- $('.jsQuickview').fadeIn(500);
-  //- }
-  //- $(document).on("click", ".btn-addcart", function (event) {
-  //- event.preventDefault();
-  //- variant_id_quickview = $('#quickview-select').val();
-  //- quantity_quickview = $('#quantity-quickview').val();
-  //- var params = {
-  //- type: 'POST',
-  //- url: '/cart/add.js',
-  //- async: true,
-  //- data: 'quantity=' + quantity_quickview + '&id=' + variant_id_quickview,
-  //- dataType: 'json',
-  //- success: function (line_item) {
-  //- window.location = '/cart';
-  //- },
-  //- error: function (XMLHttpRequest, textStatus) {
-  //- alert('Sản phẩm bạn vừa mua đã vượt quá tồn kho');
-  //- }
-  //- };
-  //- jQuery.ajax(params);
-  //- });
-  //- });
+    section#page_content
+  #pageContainer.clearfix
+    header.header.bkg.visible-lg
+      .container.clearfix
+        .row
+          .col-lg-5.col-md-5.col-sm-12.col-xs-12.logo
+            .row
+              .col-lg-12.col-md-12.col-sm-7.col-xs-7
+                // LOGO
+                h1
+                  a(href='http://happylive.vn')
+                    img.img-responsive.logoimg(src='/images/theme-default//logo.png?v=90', alt='Happylive')
+                h1(style='display:none')
+                  a(href='/') Happylive
+              .hidden-lg.hidden-md.col-sm-5.col-xs-5.mobile-icons
+                div
+                  a.mobile-cart(href='#', title='Xem giỏ hàng')
+                    span 5
+                  a#mobile-toggle(href='#')
+                    i.fa.fa-bars
+          .col-lg-7.hidden-md.hidden-sm.hidden-xs
+            aside.top-info
+              .cart-info.hidden-xs
+                a.cart-link(href='/cart')
+                  span.icon-cart
+                  .cart-number
+                    | 5
+                .cart-view.clearfix(style='display: none;')
+                  table#clone-item-cart.table-clone-cart
+                    tr.item_2.hidden
+                      td.img
+                        a(href='', title='')
+                          img(src='', alt='')
+                      td
+                        a.pro-title-view(href='', title='')
+                        span.variant
+                        span.pro-quantity-view
+                        span.pro-price-view
+                        span.remove_link.remove-cart
+                  table#cart-view
+                    tr
+                      td.img
+                        a(href='/products/dong-ho-nam-skmei-kim-xanh-duong')
+                          img(src='/images/product/1_e0ed7c0240734782a8268793dce0b9b8_small.jpg ', alt='ĐỒNG HỒ NAM SKMEI KIM XANH DƯƠNG')
+                      td
+                        a.pro-title-view(href='/products/dong-ho-nam-skmei-kim-xanh-duong', title='ĐỒNG HỒ NAM SKMEI KIM XANH DƯƠNG') &Dstrok;&#x1ED2;NG H&#x1ED2; NAM SKMEI KIM XANH D&#x1AF;&#x1A0;NG
+                        span.variant
+                        span.pro-quantity-view 2
+                        span.pro-price-view 499,000&#x20AB;
+                        span.remove_link.remove-cart
+                          a(href='javascript:void(0);', onclick='deleteCart(1012030836)')
+                            i.fa.fa-times
+                    tr
+                      td.img
+                        a(href='/products/dong-ho-nam-tevise-1952-chay-co-cuc-chat')
+                          img(src='/images/product/7_0590d26379fb4da3ba8d9b57564ee6b0_small.jpg ', alt='ĐỒNG HỒ NAM TEVISE 1952 CHẠY CƠ CỰC CHẤT')
+                      td
+                        a.pro-title-view(href='/products/dong-ho-nam-tevise-1952-chay-co-cuc-chat', title='ĐỒNG HỒ NAM TEVISE 1952 CHẠY CƠ CỰC CHẤT') &Dstrok;&#x1ED2;NG H&#x1ED2; NAM TEVISE 1952 CH&#x1EA0;Y C&#x1A0; C&#x1EF0;C CH&#x1EA4;T
+                        span.variant
+                        span.pro-quantity-view 3
+                        span.pro-price-view 800,000&#x20AB;
+                        span.remove_link.remove-cart
+                          a(href='javascript:void(0);', onclick='deleteCart(1012006173)')
+                            i.fa.fa-times
+                  span.line
+                  table.table-total
+                    tr
+                      td.text-left T&#x1ED4;NG TI&#x1EC0;N:
+                      td#total-view-cart.text-right 3,398,000&#x20AB;
+                    tr
+                      td
+                        a.linktocart(href='/cart') Xem gi&#x1ECF; h&agrave;ng
+                      td
+                        a.linktocheckout(href='/checkout') Thanh to&aacute;n
+              .navholder
+                nav#subnav
+                  ul
+                    li
+                      a(href='#')
+                        i.fa.fa-phone(aria-hidden='true')
+                        |  0978.828.888
+                    li
+                      a.reg(href='/account/register', title='Đăng ký') &Dstrok;&Abreve;NG K&Yacute;
+                    li
+                      a.log(href='/account/login', title='Đăng nhập') &Dstrok;&abreve;ng nh&#x1EAD;p
+                .header_line
+                  p
+                    | Mi&#x1EC5;n ph&iacute; v&#x1EAD;n chuy&#x1EC3;n
+                    span.mar-l5 &Dstrok;&#x1A0;N H&Agrave;NG TR&Ecirc;N 500K TP H&Agrave; N&#x1ED8;I
+    nav.navbar-main.navbar.navbar-default.cl-pri
+      // MENU MAIN
+      .container.nav-wrapper.check_nav
+        .row
+          .navbar-header
+            .mobile-menu-icon-wrapper
+              .menu-logo
+                h1.logo.logo-mobile
+                  a(href='http://happylive.vn')
+                    img.img-responsive.logoimg(src='/images/theme-default/logo.png?v=90', alt='Happylive')
+                .nav-login
+                  a.cart(href='/account', title='Tài khoản')
+                    svg.icon.icon-user(viewbox='0 0 32 32')
+                      use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#icon-user')
+                .menu-btn.click-menu-mobile
+                  a.navbar-toggle(href='#menu-mobile')
+                    span.sr-only Toggle navigation
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                #cart-targets.cart
+                  a.cart(href='/cart', title='Giỏ hàng')
+                    span
+                      svg.shopping-cart
+                        use(xmlns:xlink='./www.w3.org/1999/xlink', xlink:href='#icon-add-cart')
+                    span#cart-count.cart-number 0
+              .search-bar-top
+                .search-input-top
+                  form(action='/search')
+                    input(type='hidden', name='type', value='product')
+                    input(type='text', name='q', placeholder='Tìm kiếm sản phẩm ...')
+                    button.icon-search(type='submit')
+                      svg.icon-search_white
+                        use(xmlns:xlink='./www.w3.org/1999/xlink', xlink:href='#icon-search_white')
+          #navbar.navbar-collapse.collapse
+            ul.nav.navbar-nav.clearfix
+              li
+                a.current(href='/', title='Trang chủ')
+                  span Trang ch&#x1EE7;
+              li.dropdown
+                a(href='/collections/dong-ho-nam', title='Gạch Nội Thất')
+                  span G&#x1EA1;ch N&#x1ED9;i Th&#x1EA5;t
+                ul.dropdown-menu(role='menu')
+                  li
+                    a(href='/collections/dong-ho-nam-tevise', title='Đồng hồ Tevise') Squier
+                  li
+                    a(href='/collections/dong-ho-nam-skmei', title='Đồng hồ Skmei') Chorus
+                  li
+                    a(href='/collections/dong-ho-nam-halei', title='Đồng hồ Halei') Boltz
+                  li
+                    a(href='/collections/dong-ho-nam-longbo', title='Đồng hồ Longbo') Unizon
+                  li
+                    a(href='/collections/dong-ho-nam-curren', title='Đồng hồ nam Curren') Ballad
+                  li
+                    a(href='/collections/dong-ho-nam-baishuns', title='Đồng hồ nam Baishuns') &Dstrok;&#x1ED3;ng h&#x1ED3; nam Baishuns
+              li.dropdown
+                a(href='/collections/dong-ho-nu', title='Đồng hồ nữ')
+                  span G&#x1EA1;ch Ngo&#x1EA1;i Th&#x1EA5;t
+                ul.dropdown-menu(role='menu')
+                  li
+                    a(href='/collections/dong-ho-nu-beesister', title='Đồng hồ Beesister') Slope
+                  li
+                    a(href='/collections/dong-ho-nu-skmei', title='Đồng hồ Skmei') Peco
+                  li
+                    a(href='/collections/dong-ho-nu-halei', title='Đồng hồ Halei') Toha
+              li
+                a(href='/pages/dich-vu', title='Dịch vụ')
+                  span D&#x1ECB;ch v&#x1EE5;
+              li
+                a(href='/pages/gioi-thieu', title='Giới thiệu')
+                  span Gi&#x1EDB;i thi&#x1EC7;u
+              li
+                a(href='/blogs/news', title='Blog')
+                  span Blog
+          .hidden-xs.pull-right.right-menu
+            ul.nav.navbar-nav.pull-right
+              li.col-md-12
+                .search-bar
+                  div
+                    form(action='/search')
+                      input(type='hidden', name='type', value='product')
+                      input(type='text', name='q', placeholder='Tìm kiếm...', autocomplete='off')
+          // /.nav-collapse
+      // End container
 
   block content
+  block footer
+    footer#footer
+      .footer-bottom
+        .container
+          .row
+            .col-sm-6.col-md-3.col-xs-12.clear-sm
+              .widget-wrapper.animated
+                h3.title.title_left Gi&#x1EDB;i thi&#x1EC7;u
+                .inner.about_us
+                  p.message
+                    | OXYWATCH cam k&#x1EBF;t, t&#x1EA5;t c&#x1EA3; &dstrok;&#x1ED3;ng h&#x1ED3; &dstrok;&#x1B0;&#x1EE3;c b&aacute;n tr&#x1EF1;c ti&#x1EBF;p t&#x1EA1;i h&#x1EC7; th&#x1ED1;ng c&aacute;c c&#x1EED;a h&agrave;ng c&#x1EE7;a ch&uacute;ng t&ocirc;i v&agrave; b&aacute;n Online &dstrok;&#x1EC1;u l&agrave; h&agrave;ng ch&iacute;nh h&atilde;ng 100%
+                  ul.list-unstyled
+                    li
+                      i.fa.fa-home
+                      | Qu&#x1EAD;n B&#x1EAF;c T&#x1EEB; Li&ecirc;m, H&agrave; N&#x1ED9;i
+                    li
+                      i.fa.fa-envelope-o
+                      a(href='mailto:Suport@oxywatch.vn') Suport@oxywatch.vn
+                    li
+                      i.fa.fa-phone
+                      | 0978.825.365
+            .col-sm-6.col-md-2.col-xs-12.clear-sm
+              .widget-wrapper.animated
+                h3.title.title_left Li&ecirc;n k&#x1EBF;t
+                .inner
+                  ul.list-unstyled.list-styled
+                    li
+                      a(href='/') Trang ch&#x1EE7;
+                    li
+                      a(href='/collections/dong-ho-nam') &Dstrok;&#x1ED3;ng h&#x1ED3; nam
+                    li
+                      a(href='/collections/dong-ho-nu') &Dstrok;&#x1ED3;ng h&#x1ED3; n&#x1EEF;
+                    li
+                      a(href='/pages/dich-vu') D&#x1ECB;ch v&#x1EE5;
+                    li
+                      a(href='/pages/gioi-thieu') Gi&#x1EDB;i thi&#x1EC7;u
+                    li
+                      a(href='/blogs/news') Blog
+            .col-sm-6.col-md-3.col-xs-12.clear-sm
+              .widget-wrapper.animated
+                h3.title.title_left &Dstrok;&abreve;ng k&iacute; nh&#x1EAD;n tin
+                .inner
+                  form.contact-form(accept-charset='UTF-8', action='/account/contact', method='post')
+                    input(name='form_type', type='hidden', value='customer')
+                    input(name='utf8', type='hidden', value='✓')
+                    .group-input
+                      input#contact_tags(type='hidden', name='contact[tags]', value='khách hàng tiềm năng, bản tin')
+                      input#contact_email(type='email', required='required', name='contact[email]')
+                      span.bar
+                      label Nh&#x1EAD;p email c&#x1EE7;a b&#x1EA1;n
+                      button(type='submit')
+                        i.fa.fa-paper-plane-o
+                  .caption H&atilde;y nh&#x1EAD;p email c&#x1EE7;a b&#x1EA1;n v&agrave;o &dstrok;&acirc;y &dstrok;&#x1EC3; nh&#x1EAD;n tin!
+                #widget-social.social-icons
+                  ul.list-inline
+                    li
+                      a.social-wrapper.facebook(target='_blank', href='/')
+                        span.social-icon
+                          i.fab.fa-facebook-f
+                    li
+                      a.social-wrapper.twitter(target='_blank', href='/')
+                        span.social-icon
+                          i.fa.fa-twitter
+                    li
+                      a.social-wrapper.pinterest(target='_blank', href='/')
+                        span.social-icon
+                          i.fa.fa-pinterest
+                    li
+                      a.social-wrapper.google(target='_blank', href='/')
+                        span.social-icon
+                          i.fa.fa-google-plus
+                    li
+                      a.social-wrapper.youtube(target='_blank', href='/')
+                        span.social-icon
+                          i.fa.fa-youtube
+                    li
+                      a.social-wrapper.instagram(target='_blank', href='/')
+                        span.social-icon
+                          i.fa.fa-instagram
+            .col-sm-6.col-md-4.col-xs-12.clear-sm
+              .widget-wrapper.animated
+                h3.title.title_left K&#x1EBF;t n&#x1ED1;i v&#x1EDB;i ch&uacute;ng t&ocirc;i
+                .inner
+                  // Facebook widget
+                  .footer-static-content
+                    .fb-page(data-href='https://www.facebook.com/codersx', data-height='300', data-small-header='false', data-adapt-container-width='true', data-hide-cover='false', data-show-facepile='true', data-show-posts='false') &#x9;
+                  div(style='clear:both;')
+                  // #Facebook widget
+                
+      .footer-copyright
+        .container.copyright
+          p
+            | Copyright &copy; 2019 Nippon. 
+            a(target='_blank', href='https://www.haravan.com') Powered by T.A
+            | .
+    a.scrollToTop.show(href='#')
+      i.fa.fa-chevron-up
+    // Scroll to Top
+    #myCart.modal.fade.bs-example-modal-lg.in(style='display:none', tabindex='-1', role='dialog', aria-labelledby='myLargeModalLabel', aria-hidden='false')
+      .modal-dialog.modal-lg
+        .modal-content
+          .modal-header
+            h4#exampleModalLabel.modal-title B&#x1EA1;n c&oacute; 9 s&#x1EA3;n ph&#x1EA9;m trong gi&#x1ECF; h&agrave;ng.
+            button.close(type='button', data-dismiss='modal', aria-label='Close')
+              span.hrv-close-modal
+          form#cartform(action='/cart', method='post', style='display: block;')
+            .modal-body
+              table#cart-table(style='width:100%;')
+                tbody
+                  tr
+                    th
+                    th T&ecirc;n s&#x1EA3;n ph&#x1EA9;m
+                    th S&#x1ED1; l&#x1B0;&#x1EE3;ng
+                    th Gi&aacute; ti&#x1EC1;n
+                    th
+                  tr.line-item.original
+                    td.item-image
+                    td.item-title
+                      a
+                    td.item-quantity
+                    td.item-price
+                    td.item-delete.text-center
+                  tr.line-item
+                    td.item-image
+                      img(src='/images/product/7_0590d26379fb4da3ba8d9b57564ee6b0_small.jpg')
+                    td.item-title
+                      a(href='/products/dong-ho-nam-tevise-1952-chay-co-cuc-chat')
+                        | &Dstrok;&#x1ED2;NG H&#x1ED2; NAM TEVISE 1952 CH&#x1EA0;Y C&#x1A0; C&#x1EF0;C CH&#x1EA4;T
+                        br
+                        span
+                    td.item-quantity
+                      input#quantity1(name='updates[]', min='1', type='number', value='3')
+                    td.item-price 2,400,000&#x20AB;
+                    td.item-delete.text-center
+                      a(href='javascript:void(0);', onclick='deleteCart(1012006173)')
+                        i.fa.fa-times
+                  tr.line-item
+                    td.item-image
+                      img(src='/images/product/1_e0ed7c0240734782a8268793dce0b9b8_small.jpg')
+                    td.item-title
+                      a(href='/products/dong-ho-nam-skmei-kim-xanh-duong')
+                        | &Dstrok;&#x1ED2;NG H&#x1ED2; NAM SKMEI KIM XANH D&#x1AF;&#x1A0;NG
+                        br
+                        span
+                    td.item-quantity
+                      input#quantity1(name='updates[]', min='1', type='number', value='6')
+                    td.item-price 2,994,000&#x20AB;
+                    td.item-delete.text-center
+                      a(href='javascript:void(0);', onclick='deleteCart(1012030836)')
+                        i.fa.fa-times
+            .modal-footer
+              .row
+                .col-sm-6
+                  .modal-note
+                    textarea#note(placeholder='Viết ghi chú', name='note', rows='5')
+                .col-sm-6
+                  .total-price-modal
+                    | T&#x1ED5;ng c&#x1ED9;ng : 
+                    span.item-total 5,394,000&#x20AB;
+              .row(style='margin-top:10px;')
+                .col-lg-6
+                  .comeback
+                    a(href='/collections/all')
+                      i.fa.fa-caret-left.mr10
+                      | Ti&#x1EBF;p t&#x1EE5;c mua h&agrave;ng
+                .col-lg-6.text-right
+                  .buttons.btn-modal-cart
+                    button#checkout.button-default(type='submit', name='checkout')
+                      | &Dstrok;&#x1EB7;t h&agrave;ng
+                      i.fa.fa-caret-right
+                  .buttons.btn-modal-cart
+                    button#update-cart-modal.button-default(type='submit', name='')
+                      i.fa.fa-caret-left
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;C&#x1EAD;p nh&#x1EAD;t
+    svg.hidden(xmlns='http://www.w3.org/2000/svg')
+      symbol#icon-add-cart
+        svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 512 512', enable-background='new 0 0 512 512')
+          g
+            g
+              polygon(points='447.992,336 181.555,336 69.539,80 0.008,80 0.008,48 90.477,48 202.492,304 447.992,304 		')
+            path(d='M287.992,416c0,26.5-21.5,48-48,48s-48-21.5-48-48s21.5-48,48-48S287.992,389.5,287.992,416z')
+            path(d='M447.992,416c0,26.5-21.5,48-48,48s-48-21.5-48-48s21.5-48,48-48S447.992,389.5,447.992,416z')
+            g
+              polygon(points='499.18,144 511.992,112 160.008,112 172.805,144 		')
+              polygon(points='211.195,240 223.992,272 447.992,272 460.805,240 		')
+              polygon(points='486.398,176 185.602,176 198.398,208 473.586,208 		')
+      symbol#icon-list-switch
+        svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 194.828 194.828', style='enable-background:new 0 0 194.828 194.828;', xml:space='preserve')
+          g
+            g
+              g
+                path(d='M190.931,17.534H3.897C1.745,17.534,0,19.279,0,21.431v19.483c0,2.152,1.745,3.897,3.897,3.897h187.034\
+                c2.152,0,3.897-1.745,3.897-3.897V21.431C194.828,19.279,193.083,17.534,190.931,17.534z M187.034,37.017H7.793v-11.69h179.241\
+                V37.017z')
+                path(d='M190.931,64.293H3.897C1.745,64.293,0,66.038,0,68.19v31.172c0,2.152,1.745,3.897,3.897,3.897h187.034\
+                c2.152,0,3.897-1.745,3.897-3.897V68.19C194.828,66.038,193.083,64.293,190.931,64.293z M187.034,95.466H7.793v-23.38h179.241\
+                V95.466z')
+                path(d='M190.931,122.741H3.897c-2.152,0-3.897,1.745-3.897,3.897v46.759c0,2.152,1.745,3.897,3.897,3.897h187.034\
+                c2.152,0,3.897-1.745,3.897-3.897v-46.759C194.828,124.486,193.083,122.741,190.931,122.741z M187.034,169.5H7.793v-38.966\
+                h179.241V169.5z')
+          g
+          g
+          g
+          g
+          g
+          g
+          g
+          g
+          g
+          g
+          g
+          g
+          g
+          g
+          g
+      symbol#icon-sort-by
+        svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 490 490', style='enable-background:new 0 0 490 490;', xml:space='preserve')
+          g
+            polygon(points='85.877,154.014 85.877,428.309 131.706,428.309 131.706,154.014 180.497,221.213 217.584,194.27 108.792,44.46 \
+            0,194.27 37.087,221.213 	')
+            polygon(points='404.13,335.988 404.13,61.691 358.301,61.691 358.301,335.99 309.503,268.787 272.416,295.73 381.216,445.54 \
+            490,295.715 452.913,268.802 	')
+          g
+          g
+          g
+          g
+          g
+          g
+          g
+          g
+          g
+          g
+          g
+          g
+          g
+          g
+          g
+      symbol#icon-search_white(viewbox='0 0 1024 1024')
+        path.path1(d='M1014.176 968.256l-264.32-260.128c69.184-75.264 111.68-174.688 111.68-284.128 0-234.080-192.8-423.872-430.688-423.872s-430.72 189.792-430.72 423.872c0 234.112 192.864 423.872 430.72 423.872 102.752 0 197.088-35.552 271.072-94.688l265.376 261.12c12.928 12.736 33.952 12.736 46.88 0 12.96-12.672 12.96-33.376 0-46.048zM430.848 782.688c-201.312 0-364.48-160.64-364.48-358.688 0-198.080 163.168-358.656 364.48-358.656 201.28 0 364.448 160.576 364.448 358.656 0.032 198.048-163.168 358.688-364.448 358.688z')
+      symbol#icon-user(viewbox='0 0 1024 1024')
+        title user
+        path.path1(d='M622.826 702.736c-22.11-3.518-22.614-64.314-22.614-64.314s64.968-64.316 79.128-150.802c38.090 0 61.618-91.946 23.522-124.296 1.59-34.054 48.96-267.324-190.862-267.324s-192.45 233.27-190.864 267.324c-38.094 32.35-14.57 124.296 23.522 124.296 14.158 86.486 79.128 150.802 79.128 150.802s-0.504 60.796-22.614 64.314c-71.22 11.332-337.172 128.634-337.172 257.264h896c0-128.63-265.952-245.932-337.174-257.264z')
+
+script(src='/javascripts/custom_fe.js', type='text/javascript')
 

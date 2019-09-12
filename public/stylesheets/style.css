@@ -1990,6 +1990,11 @@ span.pro-price-view {
     float: right;
 }
 
+/* #menu-mobile:active .mm-menu.mm-offcanvas {
+    display: block;
+    z-index: 1;
+} */
+
 .responsive-menu .menu-btn.click-menu-mobile {
     float: left;
     margin-top: 10px;

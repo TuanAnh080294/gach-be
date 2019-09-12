@@ -1,5 +1,42 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  // Begin slider
+  .slider-default.bannerslider
+    .hrv-banner-container
+      .hrvslider
+        ul.slides
+          li
+            a.hrv-url(href='/collections/dong-ho-nam-rolex')
+              img.img-responsive(src='/images/theme-default/slideshow_1.jpg?v=90', alt='Thời trang nam')
+            #hrv-banner-caption1.hrv-caption.hrv-banner-caption
+              .container
+                .hrv-caption-inner
+                  .hrv-banner-content.slider-1
+                    h2.hrv-title1 &Dstrok;&#x1EB3;ng c&#x1EA5;p v&#x1EC1; th&#x1B0;&#x1A1;ng hi&#x1EC7;u
+                    h3.hrv-title2 &Dstrok;&#x1ED2;NG H&#x1ED2; ROLEX
+                    a.hrv-url(href='/collections/dong-ho-nam-rolex') Xem ngay
+          li
+            a.hrv-url(href='/collections/dong-ho-nam-tissot')
+              img.img-responsive(src='/images/theme-default/slideshow_2.jpg?v=90', alt='')
+            #hrv-banner-caption2.hrv-caption.hrv-banner-caption
+              .container
+                .hrv-caption-inner
+                  .hrv-banner-content.slider-2
+                    h2.hrv-title1 Tinh t&#x1EBF; sang tr&#x1ECD;ng
+                    h3.hrv-title2 &Dstrok;&#x1ED2;NG H&#x1ED2; TISSOT
+                    a.hrv-url(href='/collections/dong-ho-nam-tissot') Xem ngay
+          li
+            a.hrv-url(href='/collections/cap-dong-ho-tinh-yeu')
+              img.img-responsive(src='/images/theme-default/slideshow_3.jpg?v=90', alt='')
+            #hrv-banner-caption3.hrv-caption.hrv-banner-caption
+              .container
+                .hrv-caption-inner
+                  .hrv-banner-content.slider-3
+                    h2.hrv-title1 M&oacute;n qu&agrave; h&#x1EA1;nh ph&uacute;c
+                    h3.hrv-title2 Ti&#x1EBF;t ki&#x1EC7;m &dstrok;&#x1EBF;n 50%
+                    a.hrv-url(href='/collections/cap-dong-ho-tinh-yeu') Xem ngay
+  // End slider
+
+  
+
