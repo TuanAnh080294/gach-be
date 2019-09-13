@@ -5759,7 +5759,7 @@ span.action_link {
         -webkit-transition: all 0.3s ease-in-out 0s;
         -o-transition: all 0.3s ease-in-out 0s;
         transition: all 0.3s ease-in-out 0s;
-        padding: 0;
+        padding: 10px;
         display: inline-block;
         vertical-align: top;
         color: #333333;
